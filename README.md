@@ -16,4 +16,5 @@ Le MVP du projet doit comporter les éléments suivant :
     * Bouton d'ajout et bouton de suppression d'un élément de la liste
     * Elément de la liste contient la description de l'élément, ainsi qu'une checkbox pour valider si la tâche a été accomplie.
 2. Définition des tests de développement.
-3. Ecriture du code.
+3. Ecriture des tests.
+4. Ecriture du code.
