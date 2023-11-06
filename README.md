@@ -15,6 +15,7 @@ Le MVP du projet doit comporter les éléments suivant :
     * Elément input pour ajouter un élément à la to-do list
     * Bouton d'ajout et bouton de suppression d'un élément de la liste
     * Elément de la liste contient la description de l'élément, ainsi qu'une checkbox pour valider si la tâche a été accomplie.
-2. Définition des tests de développement.
+2. Définition des tests de développement :<br> 
+les tests unitaires vérifient que les fonctions exécutent bien leur tâche et retournent ce qu'elles sont sensées retourner.
 3. Ecriture des tests.
 4. Ecriture du code.
