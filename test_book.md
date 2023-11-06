@@ -11,9 +11,11 @@
 7. **markAllUndone()** : cette fonction effectue l'inverse de la fonction précédente.
 
 ---
-## PREMIER TEST 
+## FONCTION addTask()
 
-**NOM :** addTask()<br>
+### PREMIER TEST 
+
+**NOM :** ajout d'un objet rempli<br>
 **ID :** #1<br>
 
 **Objectif :**<br> 
@@ -27,10 +29,26 @@ Ce test a pour but de vérifier que la fonction JS 'addTask()' ajoute bien un ob
 **Résultat attendu :**<br>
 La variable array reçoit un nouvel élément.
 
----
-## DEUXIEME TEST
+### DEUXIEME TEST
 
-**NOM :** removeTask()<br>
+**NOM :** ajout d'un objet vide<br>
+**ID :** #2<br>
+
+**Objectif :**<br>
+
+
+**Etapes de test :**<br>
+
+
+**Résultat attendu :**<br>
+
+
+---
+## FONCTION removeTask()
+
+### PREMIER TEST
+
+**NOM :** suppression d'un objet à un index donné<br>
 **ID :** #2<br>
 
 **Objectif :**<br>
@@ -38,14 +56,18 @@ Ce test a pour but de vérifier que la fonction JS 'removeTask()' supprime bien 
 
 **Etapes de test :**<br>
 1. creation d'un tableau avec plusieurs éléments (objets JSON).
-2. appel de la fonction removeTask().
-3. verification que l'element en question est supprimé du tableau.
+2. appel de la fonction removeTask(index) qui prend en paramètre un index.
+3. verification que l'element à l'index en question est supprimé du tableau.
 
 **Résultat attendu :**<br>
 L'objet JSON correspondant est supprimé du tableau.
 
+### DEUXIEME TEST
+
 ---
-## TROISIEME TEST
+## FONCTION sortTasks()
+
+### PREMIER TEST
 
 **NOM :** sortTasks()<br>
 **ID :** #3<br>
