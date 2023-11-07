@@ -30,7 +30,6 @@ describe('addTask()', () => {
     mockTask.done = false;
 
     let result = addTask(mockTask, taskArray);
-
     it('ADT01', () => {    
         expect(result).toHaveLength(1);
         expect(result[0]).toEqual(mockTask);
@@ -90,7 +89,7 @@ describe('markTaskCompleted()', () => {
         const taskArray = [
           { label: 'Task 1', done: false },
           { label: 'Task 2', done: false },
-          { label: 'Task 3', done: false },
+          { label: 'Task 3', done: false }
         ];
     
         const taskToMarkDone = taskArray[1];
@@ -99,8 +98,64 @@ describe('markTaskCompleted()', () => {
         expect(result).toEqual([
           { label: 'Task 1', done: false },
           { label: 'Task 2', done: true },
-          { label: 'Task 3', done: false },
+          { label: 'Task 3', done: false }
         ]);
      });
 })
 
+
+describe('markTaskUncompleted()', () => {
+    it('MTU01', () => {
+      const taskArray = [
+        { label: 'Task 1', done: true },
+        { label: 'Task 2', done: true },
+        { label: 'Task 3', done: true }
+      ];
+
+      const taskToMarkUndone = taskArray[1];
+      const result = markTaskUncompleted(taskArray, taskToMarkUndone);
+
+      expect(result).toEqual([
+        { label: 'Task 1', done: true },
+        { label: 'Task 2', done: false },
+        { label: 'Task 3', done: true }
+      ])
+    })
+})
+
+describe('markAllAsDone()', () => {
+    it('MAD01', () => {
+        const initialToDoList = [
+          { label: 'Task 1', done: false },
+          { label: 'Task 2', done: false },
+          { label: 'Task 3', done: false },
+        ];
+    
+        const expectedToDoList = [
+          { label: 'Task 1', done: true },
+          { label: 'Task 2', done: true },
+          { label: 'Task 3', done: true },
+        ];
+    
+        const result = markAllAsDone(initialToDoList);
+    
+        expect(result).toEqual(expectedToDoList);
+     });
+})
+
+describe('markAllUndone()', () => {
+    it('MAU01', () => {
+        const initialToDoList = [
+            { label: 'Task 1', done: true },
+            { label: 'Task 2', done: true },
+            { label: 'Task 3', done: true },
+        ];
+        const expectedToDoList = [
+            { label: 'Task 1', done: false },
+            { label: 'Task 2', done: false },
+            { label: 'Task 3', done: false },
+        ];
+        const result = markAllUndone(initialToDoList);
+        expect(result).toEqual(expectedToDoList);
+    });
+})

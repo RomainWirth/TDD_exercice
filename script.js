@@ -14,3 +14,14 @@ export function markTaskCompleted(array, object) {
 
 };
 
+export function markTaskUncompleted(array, object) {
+
+};
+
+export function markAllAsDone(array) {
+
+};
+
+export function markAllUndone(array) {
+
+};
