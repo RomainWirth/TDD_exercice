@@ -3,6 +3,7 @@
 ## LISTE DES FONCTIONS
 
 1. **addTask()** : cette fonction a pour but d'ajouter les éléments d'une tâche à compléter dans un tableau.
+2. **checkTaskObject()** : fonction qui a pour but de vérifier le contenu de l'objet.
 2. **removeTask()** : cette fonction supprime une tâche du tableau des tâches à compléter.
 3. **sortTasks()** : cette fonction permet de modifier l'ordre des tâches dans le tableau d'éléments.
 4. **markTaskCompleted()** : cette fonction a pour but de changer l'état de la tâche de "not completed" a "completed" (false > true).
@@ -16,7 +17,7 @@
 ### PREMIER TEST 
 
 **NOM :** ajout d'un objet rempli<br>
-**ID :** #1<br>
+**ID :** ADT01<br>
 
 **Objectif :**<br> 
 Ce test a pour but de vérifier que la fonction JS 'addTask()' ajoute bien un objet dans un tableau d'éléments.
@@ -32,16 +33,53 @@ La variable array reçoit un nouvel élément.
 ### DEUXIEME TEST
 
 **NOM :** ajout d'un objet vide<br>
-**ID :** #2<br>
+**ID :** ADT02<br>
 
 **Objectif :**<br>
-
+Ce test a pour but de vérifier que la fonction renvoie bien une erreur si l'objet est vide.
 
 **Etapes de test :**<br>
-
+1. creation d'une variable array vide.
+2. appel de la fonction addTask(), en passant un objet vide.
+3. verification qu'il y ait une exception.
 
 **Résultat attendu :**<br>
+Lorsque l'on appelle la fonction, il doit y avoir une exception.
 
+---
+## FONCTION checkTaskObject()
+
+### PREMIER TEST
+
+**NOM :** vérification du contenu de l'objet<br>
+**ID :** CTO01<br>
+
+**Objectif :**<br>
+Vérifier que la fonction ne renvoie pas false si on lui passe un object contenant les bonnes propriétés.<br>
+
+**Etapes de test :**<br>
+1. Création d'un objet avec toutes les propriétés nécessaires (id, description, date et statut).
+2. Appel de la fonction checkTaskObject() en passant cet objet.
+3. Vérification du résultat obtenu.
+
+**Résultat attendu :**<br>
+Le résultat attendu est true.
+
+### DEUXIEME TEST
+
+**NOM :**<br>
+**ID :** #2<br>
+**Objectif :**<br>
+Vérifier que la fonction renvoie false si on lui passe un object manquant des propriétés necessairees (date ou statut).
+Vérifier que la fonction renvoie false si on lui passe un object sans la propriété id ou description ou date ou statut.<br
+Vérifier que la fonction renvoie false si on lui passe un object manquant des propriétés id ou description ou date ou statut.<
+Vérifier que la fonction renvoie false si on lui passe un object manquant des propriétés necessairees.<br>
+**Etapes de test :**<br>
+1. Création d'un objet sans la propriété "description".
+2. Appel de la fonction checkTaskObject() en passant cet objet.
+3. Vérification du résultat obtenu.
+**Résultat attendu :**<br>
+Le résultat attendu est false.
 
 ---
 ## FONCTION removeTask()
