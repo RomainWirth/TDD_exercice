@@ -4,10 +4,11 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "test": "vitest"
+    "test": "vitest",
+    "test:ui": "vitest --ui"
   },
   "keywords": [],
-  "author": "",
+  "author": "Romain Wirth",
   "license": "ISC",
   "devDependencies": {
     "@vitest/ui": "^0.34.6",
