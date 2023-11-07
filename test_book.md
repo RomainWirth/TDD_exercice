@@ -70,7 +70,7 @@ Le résultat attendu est true.
 **NOM :** vérification du contenu de l'objet<br>
 **ID :** CTO02<br>
 **Objectif :**<br>
-Vérifier que la fonction renvoie false si on lui passe un object manquant des propriétés nécessairees (date ou statut).<br>
+Vérifier que la fonction renvoie false si on lui passe un object manquant des propriétés nécessaires (label: string & done: boolean).<br>
 
 **Etapes de test :**<br>
 1. Création d'un objet avec une propriété qui n'est pas attendue.
