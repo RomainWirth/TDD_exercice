@@ -1,0 +1,33 @@
+name: GitHub Actions on Push
+
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+
+on:
+  pull_request:
+  push:
+    - master
+    - develop
+
+jobs:
+  test:
+    name: Running Units Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with: 
+          node-version: ${{ matrix.node-version }}
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - name: Install
+        run: npm install
+      - name: test
+        run: npm run test
+      - name: test:ui
+        run: npm run test:ui
+      - name: test coverage
+        run: npm run coverage
