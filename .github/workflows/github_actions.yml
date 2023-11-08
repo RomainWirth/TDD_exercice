@@ -1,31 +1,28 @@
-name: GitHub Actions on Push
+name: Node.js CI
 
 on:
-  pull_request:
   push:
-    - main
-    # - develop
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
-  test:
-    name: Running Units Tests
+  build:
+
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v4
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with: 
-          node-version: ${{ matrix.node-version }}
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
-      # - name: Install
-      #   run: npm install
-      - name: test
-        run: npm run test
-      - name: test:ui
-        run: npm run test:ui
-      - name: test coverage
-        run: npm run coverage
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm ci
+    # - run: npm run build --if-present
+    - run: npm test
