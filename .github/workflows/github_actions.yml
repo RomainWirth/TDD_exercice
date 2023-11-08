@@ -1,12 +1,10 @@
 name: GitHub Actions on Push
 
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-
 on:
   pull_request:
   push:
     - main
-    - develop
+    # - develop
 
 jobs:
   test:
@@ -23,8 +21,8 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - name: Install
-        run: npm install
+      # - name: Install
+      #   run: npm install
       - name: test
         run: npm run test
       - name: test:ui

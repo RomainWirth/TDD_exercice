@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1699372375492" clover="3.2.0">
-  <project timestamp="1699372375492" name="All files">
+<coverage generated="1699434126220" clover="3.2.0">
+  <project timestamp="1699434126220" name="All files">
     <metrics statements="49" coveredstatements="48" conditionals="13" coveredconditionals="12" methods="7" coveredmethods="7" elements="69" coveredelements="67" complexity="0" loc="49" ncloc="49" packages="1" files="1" classes="1"/>
     <file name="script.js" path="/home/user/Cours/exercices/Test_Driven_Development/script.js">
       <metrics statements="49" coveredstatements="48" conditionals="13" coveredconditionals="12" methods="7" coveredmethods="7"/>
